@@ -25,4 +25,8 @@ export class RedisService {
   async set(key: string, value: any): Promise<void> {
     await this.client.set(key, JSON.stringify(value));
   }
+
+  async delete(key: string, value: any): Promise<void> {
+    await this.client.delete(key, JSON.stringify(value));
+  }
 }

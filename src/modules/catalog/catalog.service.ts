@@ -45,9 +45,13 @@ export class CatalogService {
 
 	async update(id: string, UpdateFilmDto: UpdateFilmDto): Promise<void> {
 		await this.catalogRepository.update(id, UpdateFilmDto);
+		var catalogs = await this.catalogRepository.find();
+		await this.redisService.set('allCatalogs', catalogs);
 	}
 
 	async remove(id: string): Promise<void> {
 		await this.catalogRepository.delete(id);
+		var catalogs = await this.catalogRepository.find();
+		await this.redisService.set('allCatalogs', catalogs);
 	}
 }
