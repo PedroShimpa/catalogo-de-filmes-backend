@@ -1,11 +1,13 @@
-import { IsDate, IsNotEmpty } from "class-validator";
+import { IsNotEmpty, IsDateString, IsOptional } from 'class-validator';
 
 export class CreateFilmDto {
   @IsNotEmpty()
   name: string;
+
+  @IsOptional()
   description: string;
 
-  @IsDate()
+  @IsOptional()
+  @IsDateString()
   releaseData: Date;
-
 }
