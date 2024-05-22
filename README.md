@@ -10,7 +10,7 @@ docker-compose up -d --build
 ```
 
 ## Docs
-The project documentation is available at {linkdoprojeto}/api
+The project documentation is available at {linkdoprojeto}/api or thunder-docs (for thunder on vscode) 
 
 
 ## Demo url

@@ -1,0 +1,135 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Catalogo",
+    "collectionId": "7fcb89fc-c1e7-4c33-9925-0363a094a068",
+    "dateExported": "2024-05-22T18:38:43.311Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "60496b10-81b0-43b8-ad4b-22610142f254",
+            "colId": "7fcb89fc-c1e7-4c33-9925-0363a094a068",
+            "containerId": "",
+            "name": "register",
+            "url": "https://catalog.pfpdesenvolvimento.com.br/user",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2024-05-22T01:05:54.307Z",
+            "modified": "2024-05-22T18:30:31.573Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"teste3@email.com\",\n  \"password\": \"teste1234\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "1470f57c-5655-4af2-8bff-0668e361d24f",
+            "colId": "7fcb89fc-c1e7-4c33-9925-0363a094a068",
+            "containerId": "",
+            "name": "login",
+            "url": "https://catalog.pfpdesenvolvimento.com.br/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-05-22T01:05:12.986Z",
+            "modified": "2024-05-22T18:30:28.399Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"teste3@email.com\",\n  \"password\": \"teste1234\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9f37c032-b865-4e6c-8866-916ac9e0ec4f",
+            "colId": "7fcb89fc-c1e7-4c33-9925-0363a094a068",
+            "containerId": "",
+            "name": "add film on catalog",
+            "url": "https://catalog.pfpdesenvolvimento.com.br/catalog",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-05-22T01:14:10.877Z",
+            "modified": "2024-05-22T18:36:46.016Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"vingadores ultimato32\",\n  \"description\": \"Os vingadores salvam o mundo novamente\",\n  \"releaseData\": \"2000-04-30\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdGUzQGVtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTY0MDI5NzEsImV4cCI6MTcxNjQwMzQ3MX0.1k6KhOF-Zds38RNB21JgnRGdGfqlEc7J4FCxzAiB2K4"
+            }
+        },
+        {
+            "_id": "e80dd631-90b5-44bc-ba89-91be3cf71af6",
+            "colId": "7fcb89fc-c1e7-4c33-9925-0363a094a068",
+            "containerId": "",
+            "name": "view all films",
+            "url": "https://catalog.pfpdesenvolvimento.com.br/catalog",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-05-22T01:33:24.927Z",
+            "modified": "2024-05-22T18:36:51.078Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdGUzQGVtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTY0MDI5NzEsImV4cCI6MTcxNjQwMzQ3MX0.1k6KhOF-Zds38RNB21JgnRGdGfqlEc7J4FCxzAiB2K4"
+            }
+        },
+        {
+            "_id": "a7f68c48-1993-48d2-a338-971d6f1acda2",
+            "colId": "7fcb89fc-c1e7-4c33-9925-0363a094a068",
+            "containerId": "",
+            "name": "film by id",
+            "url": "https://catalog.pfpdesenvolvimento.com.br/catalog/1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-05-22T03:56:51.373Z",
+            "modified": "2024-05-22T18:36:55.081Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdGUzQGVtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTY0MDI5NzEsImV4cCI6MTcxNjQwMzQ3MX0.1k6KhOF-Zds38RNB21JgnRGdGfqlEc7J4FCxzAiB2K4"
+            }
+        },
+        {
+            "_id": "bdfa4909-c75f-408d-bf39-9d3eb7738dbb",
+            "colId": "7fcb89fc-c1e7-4c33-9925-0363a094a068",
+            "containerId": "",
+            "name": "edit film",
+            "url": "https://catalog.pfpdesenvolvimento.com.br/catalog/1",
+            "method": "PATCH",
+            "sortNum": 60000,
+            "created": "2024-05-22T03:57:26.269Z",
+            "modified": "2024-05-22T18:32:56.912Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"vingadores ultimato2\",\n  \"description\": \"Os vingadores salvam o mundo novamente\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdGUzQGVtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTY0MDI3MzUsImV4cCI6MTcxNjQwMzIzNX0.JIswk0JpwAtebin-cxLxp8TCQLk3yDZu0OCu5ACgW2A"
+            }
+        },
+        {
+            "_id": "fb90277f-eab2-4826-927b-95e618876486",
+            "colId": "7fcb89fc-c1e7-4c33-9925-0363a094a068",
+            "containerId": "",
+            "name": "delete film by id",
+            "url": "https://catalog.pfpdesenvolvimento.com.br/catalog/1",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-05-22T03:57:44.546Z",
+            "modified": "2024-05-22T18:33:14.450Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdGUzQGVtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTY0MDI3MzUsImV4cCI6MTcxNjQwMzIzNX0.JIswk0JpwAtebin-cxLxp8TCQLk3yDZu0OCu5ACgW2A"
+            }
+        }
+    ],
+    "ref": "2IdyVRzAfz3L_JA0uYzGOQU5ZcERak7o1gUSnwWqwXo0gWUs8T5PaJIbQZ8VT0Df_NNIyKO8k1L8FC5PeMV__w"
+}
