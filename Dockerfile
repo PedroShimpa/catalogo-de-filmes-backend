@@ -14,7 +14,8 @@ ENV DATABASE_HOST=postgres \
 	DATABASE_PASSWORD=postgres \
 	DATABASE_NAME=desafio \
 	REDIS_HOST=redis \
-	JWT_SECRET=macacosmemordam
+	REDIS_PORT=6379 \
+	JWT_SECRET=macacosmemordam 
 
 EXPOSE 3000
 
