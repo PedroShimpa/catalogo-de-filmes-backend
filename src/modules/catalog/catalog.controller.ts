@@ -15,6 +15,7 @@ import { ProfileDto } from '../auth/dto/profile.dto';
 import { CreateFilmDto } from './dto/create-film.dto';
 import { Catalog } from './entities/catalog.entity';
 import { UpdateFilmDto } from "./dto/update-film.dto";
+import { ApiBody } from "@nestjs/swagger";
 
 @Controller('catalog')
 export class CatalogController {
@@ -28,6 +29,8 @@ export class CatalogController {
 
 	@UseGuards(AuthGuard)
 	@Post()
+	@ApiBody({ type: CreateFilmDto })
+
 	create(@Body() CreateFilmDto: CreateFilmDto): Promise<Catalog> {
 		return this.catalogService.create(CreateFilmDto)
 	}
@@ -40,6 +43,7 @@ export class CatalogController {
 
 	@UseGuards(AuthGuard)
 	@Patch(":id")
+	@ApiBody({ type: UpdateFilmDto })
 	update(
 		@Param("id") id: string,
 		@Body() UpdateFilmDto: UpdateFilmDto,

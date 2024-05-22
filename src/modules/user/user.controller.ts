@@ -11,6 +11,7 @@ import { CreateUserDto } from "./dto/create-user.dto"
 import { UpdateUserDto } from "./dto/update-user.dto"
 import { User } from "./entities/user.entity"
 import { Public } from "../auth/public.decorator"
+import { ApiBody } from "@nestjs/swagger"
 
 @Controller("user")
 export class UserController {
@@ -18,6 +19,7 @@ export class UserController {
 
   @Public()
   @Post()
+	@ApiBody({ type: CreateUserDto })
   create(@Body() createUserDto: CreateUserDto): Promise<User> {
     return this.userService.create(createUserDto)
   }
@@ -34,6 +36,7 @@ export class UserController {
   }
 
   @Patch(":id")
+  @ApiBody({ type: UpdateUserDto })
   update(
     @Param("id") id: string,
     @Body() updateUserDto: UpdateUserDto,

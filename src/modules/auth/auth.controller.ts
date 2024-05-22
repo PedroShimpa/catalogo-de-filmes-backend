@@ -13,6 +13,7 @@ import { AuthGuard } from "./auth.guard"
 import { LoginDto } from "./dto/login.dto"
 import { ProfileDto } from "./dto/profile.dto"
 import { Public } from "./public.decorator"
+import { ApiBody } from "@nestjs/swagger"
 
 @Controller("auth")
 export class AuthController {
@@ -21,6 +22,7 @@ export class AuthController {
   @HttpCode(HttpStatus.OK)
   @Public()
   @Post("login")
+  @ApiBody({ type: LoginDto })
   signIn(@Body() loginDto: LoginDto): Promise<{ access_token: string }> {
     return this.authService.signIn(loginDto)
   }
