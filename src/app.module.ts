@@ -12,10 +12,10 @@ import { CatalogoModule } from './modules/catalogo/catalogo.module';
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: '127.0.0.1',
+      host: 'postgres',
       port: 5432,
       username: 'postgres',
-      password: '282566',
+      password: 'postgres',
       database: 'desafio',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
