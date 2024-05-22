@@ -1,29 +1,13 @@
-## Description
+## Introduction
 
-[Nest](https://github.com/nestjs/nest) boilerplate with authentication.
+This project is based on a backend challenge using nest.js, redis, postgress, docker and typeorm
 
-## Installation
 
-```bash
-$ pnpm install
-```
-
-## Running the app
-
+## Installation and deploy
 ```bash
 # development
-$ pnpm run start
-
-# watch mode
-$ pnpm run start:dev
-
-# production mode
-$ pnpm run start:prod
+docker-compose up -d --build
 ```
 
-## Test
-
-```bash
-# e2e tests
-$ pnpm run test
-```
+## Docs
+The project documentation is available at {linkdoprojeto}/api
