@@ -16,6 +16,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: desafio
+    volumes:
+      - .:/usr/src/app  # Mapeia a pasta atual para /usr/src/app no contêiner
 
   postgres:
     image: postgres
