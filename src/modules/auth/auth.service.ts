@@ -19,8 +19,6 @@ export class AuthService {
       throw new BadRequestException(
         'not autorized.')
     }
-    
-    
 
     if (!compare(password, user.password)) {
       throw new BadRequestException(
