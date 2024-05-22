@@ -17,7 +17,6 @@ import { RedisService } from 'src/redis/redis.service';
     }),
     TypeOrmModule.forFeature([Catalog]),
     AuthModule,  
-    RedisService
   ],
   controllers: [CatalogController],
   providers: [CatalogService, RedisService],
