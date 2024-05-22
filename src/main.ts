@@ -10,7 +10,6 @@ async function bootstrap(): Promise<void> {
     .setTitle('Catalogo de Filme')
     .setDescription('Desafio catalogo de filmes backend em nest js, postgress e redis')
     .setVersion('1.0')
-    .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
