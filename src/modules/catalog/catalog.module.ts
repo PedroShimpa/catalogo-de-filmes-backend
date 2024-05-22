@@ -6,6 +6,7 @@ import { AuthModule } from '../auth/auth.module';
 import { Catalog } from './entities/catalog.entity';
 import { UserModule } from '../user/user.module';
 import { JwtModule } from '@nestjs/jwt';
+import { RedisService } from 'src/redis/redis.service';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { JwtModule } from '@nestjs/jwt';
     }),
     TypeOrmModule.forFeature([Catalog]),
     AuthModule,  
+    RedisService
   ],
   controllers: [CatalogController],
   providers: [CatalogService],
