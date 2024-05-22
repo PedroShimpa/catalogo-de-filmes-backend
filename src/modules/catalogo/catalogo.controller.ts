@@ -8,7 +8,7 @@ import {
 	UseGuards,
 	Request,
 	Delete
-  } from "@nestjs/common"
+} from "@nestjs/common"
 import { CatalogoService } from './catalogo.service';
 import { Public } from '../auth/public.decorator';
 import { AuthGuard } from '../auth/auth.guard';
@@ -20,12 +20,6 @@ import { UpdateFilmeDto } from "./dto/update-filme.dto";
 @Controller('catalogo')
 export class CatalogoController {
 	constructor(private catalogoService: CatalogoService) { }
-	// @HttpCode(HttpStatus.OK)
-	// @Public()
-	// @Post("login")
-	// signIn(@Body() loginDto: LoginDto): Promise<{ access_token: string }> {
-	//   return this.authService.signIn(loginDto)
-	// }
 
 	@UseGuards(AuthGuard)
 	@Get()
@@ -39,11 +33,13 @@ export class CatalogoController {
 		return this.catalogoService.create(createFilmeDto)
 	}
 
+	@UseGuards(AuthGuard)
 	@Get(":id")
 	findOne(@Param("id") id: string): Promise<Catalogo> {
 		return this.catalogoService.findOne(id)
 	}
 
+	@UseGuards(AuthGuard)
 	@Patch(":id")
 	update(
 		@Param("id") id: string,
@@ -52,6 +48,7 @@ export class CatalogoController {
 		return this.catalogoService.update(id, updateFilmeDto)
 	}
 
+	@UseGuards(AuthGuard)
 	@Delete(":id")
 	delete(
 		@Param("id") id: string,
