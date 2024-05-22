@@ -4,9 +4,9 @@ import { JwtModule } from '@nestjs/jwt';
 import { AuthService } from './auth.service';
 import { UserModule } from '../user/user.module'; 
 import { AuthController } from './auth.controller';
-import { CatalogoController } from '../catalogo/catalogo.controller';
-import { CatalogoService } from '../catalogo/catalogo.service';
-import { CatalogoModule } from '../catalogo/catalogo.module';
+import { CatalogController } from '../catalog/catalog.controller';
+import { CatalogService } from '../catalog/catalog.service';
+import { CatalogModule } from '../catalog/catalog.module';
 
 @Module({
   imports: [

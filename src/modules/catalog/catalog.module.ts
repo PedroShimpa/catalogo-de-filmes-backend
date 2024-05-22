@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { CatalogoService } from './catalogo.service';
-import { CatalogoController } from './catalogo.controller';
+import { CatalogService } from './catalog.service';
+import { CatalogController } from './catalog.controller';
 import { AuthModule } from '../auth/auth.module';
-import { Catalogo } from './entities/catalogo.entity';
+import { Catalog } from './entities/catalog.entity';
 import { UserModule } from '../user/user.module';
 import { JwtModule } from '@nestjs/jwt';
 
@@ -14,11 +14,11 @@ import { JwtModule } from '@nestjs/jwt';
       secret: 'macacosmemordam', 
       signOptions: { expiresIn: '500s' },
     }),
-    TypeOrmModule.forFeature([Catalogo]),
+    TypeOrmModule.forFeature([Catalog]),
     AuthModule,  
   ],
-  controllers: [CatalogoController],
-  providers: [CatalogoService],
-  exports: [CatalogoService]
+  controllers: [CatalogController],
+  providers: [CatalogService],
+  exports: [CatalogService]
 })
-export class CatalogoModule {}
+export class CatalogModule {}

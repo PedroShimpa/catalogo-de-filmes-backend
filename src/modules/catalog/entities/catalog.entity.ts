@@ -1,16 +1,19 @@
 import { Entity, Column, PrimaryGeneratedColumn, Unique, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity()
-@Unique(['email'])
-export class User {
+@Unique(['name'])
+export class Catalog {
   @PrimaryGeneratedColumn()
-  id?: string;
+  id?: string
 
   @Column({ unique: true })
-  email: string;
+  name: string
 
-  @Column()
-  password: string;
+  @Column({ default: null })
+  description: string
+
+  @Column({ default: null })
+  releaseData: Date;
 
   @CreateDateColumn({ type: 'timestamp with time zone', default: () => 'CURRENT_TIMESTAMP' })
   createdAt?: Date;
@@ -18,3 +21,4 @@ export class User {
   @UpdateDateColumn({ type: 'timestamp with time zone', default: null, onUpdate: 'CURRENT_TIMESTAMP' })
   updatedAt?: Date;
 }
+

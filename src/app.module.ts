@@ -5,7 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './modules/auth/auth.module';
 import { UserModule } from './modules/user/user.module';
-import { CatalogoModule } from './modules/catalogo/catalogo.module';
+import { CatalogModule } from './modules/catalog/catalog.module';
 
 @Module({
   imports: [
@@ -22,7 +22,7 @@ import { CatalogoModule } from './modules/catalogo/catalogo.module';
     }),
     AuthModule,
     UserModule,
-    CatalogoModule,
+    CatalogModule,
   ],
   controllers: [],
   providers: [],

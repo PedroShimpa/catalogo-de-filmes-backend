@@ -1,4 +1,4 @@
-import { Injectable, UnauthorizedException } from "@nestjs/common"
+import { BadRequestException, Injectable, UnauthorizedException } from "@nestjs/common"
 import { JwtService } from "@nestjs/jwt"
 import { UserService } from "../user/user.service"
 import { LoginDto } from "./dto/login.dto"
@@ -15,8 +15,16 @@ export class AuthService {
     const { email, password } = loginDto
     const user = await this.userService.findOneWithPasswordByEmail(email)
 
+    if(!user) {
+      throw new BadRequestException(
+        'not autorized.')
+    }
+    
+    
+
     if (!compare(password, user.password)) {
-      throw new UnauthorizedException()
+      throw new BadRequestException(
+        'not autorized.')
     }
 
     const payload = { sub: user.id, email: user.email, id: user.id }
