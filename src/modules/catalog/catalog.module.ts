@@ -20,7 +20,7 @@ import { RedisService } from 'src/redis/redis.service';
     RedisService
   ],
   controllers: [CatalogController],
-  providers: [CatalogService],
+  providers: [CatalogService, RedisService],
   exports: [CatalogService]
 })
 export class CatalogModule {}
